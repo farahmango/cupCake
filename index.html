@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img class="logo" src="./image/cupcake_icon.png"></a>
+
+    <a class="navbar-brand" href="#"><mark>Best CupCakes</mark> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-sm-6">
+        <form class="cont">
+            <div class="mb-3">
+              <label>Customer Name</label>
+               <div >  
+               <input class="drop" type="text"  id="name" >
+              </div>
+              <div id="helpname"></div>
+            </div>
+            <div class="mb-3">
+              <label >Count</label>
+            
+              <div >
+                   <input class="drop" type="number" id="count">
+              </div>
+              <div id="helpcount"></div>
+
+            </div>
+            <div class="mb-3">
+               
+
+              <div class="mb-3">
+                <label >Type</label>
+               <div>
+                   
+                <select class="drop" id="type" >
+                      <option >None</option>
+                      <option >Chocolate</option>
+                      <option >Lemon</option>
+                      <option >Pecan</option>
+                      <option >Strawberry</option>
+
+                  </select>
+                  <div id="helptype"></div>
+
+                
+               </div>
+              </div>
+
+
+              <label > Delivery Time</label>
+              <div>
+                  
+               <select class="drop" id="time" >
+                     <option>None</option>
+                     <option>12:00 PM</option>
+                     <option>12:30 PM</option>
+                     <option>1:00 PM</option>
+                     <option>1:30 PM </option>
+                     <option> 2:00 PM</option>
+                     <option>2:30 PM</option>
+                     <option> 3:00 PM</option>
+                     <option> 3:30 PM</option>
+                     <option> 4:00 PM</option>
+
+
+                 </select>
+               
+              </div>
+              <div id="helptime"></div>
+
+             </div>
+
+              <div class="mb-3">
+                <label >Allergies</label>
+               <div>
+                   
+                <select  id="aler" class="drop">
+                      <option value="volvo">None</option>
+                      <option value="saab">Dairy Free</option>
+                      <option value="mercedes">Nut Free</option>
+                     
+                  </select>
+                
+               </div>
+               <div id="helpaler"></div>
+
+              </div>
+
+
+
+
+           
+          </form>
+          <button  class="btn btn-primary" id="btn">Submit</button>
+    
+          </div>
+          
+      <div class="col-sm-6">
+        <button type="button" class="btn btn-dark" id="welcomeBtn">Welcome User</button>
+
+        <button type="button" class="btn btnshow" id="showBtn" >Show </button>
+
+    
+    
+        <div style="text-align:center;padding:1em 0;"> <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/city/250441"><span style="color:gray;"><iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Asia%2FAmman&show=hour_minute" width="100%" height="110" frameborder="0" seamless></iframe> </div>
+    
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Weight</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody1">
+                </tbody>
+              </table>
+    
+            </div>
+            </div>
+            </div>
+           <script src="./js/main.js"></script>
+
+           </body>
+           </html>
