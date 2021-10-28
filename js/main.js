@@ -24,7 +24,7 @@ showBtn.addEventListener("click",function (){
 
 submit.addEventListener("click",function (){
 
-    if(name1.value==""){
+  if(name1.value==""){
     helpname.innerHTML="please fill the Name";
     helpname.style.color="red"
     name1.style.border="3px solid red" 
@@ -71,7 +71,7 @@ submit.addEventListener("click",function (){
       time.style.border="3px solid red" 
     } else {
       helptime.innerHTML = "Okay";
-      helptime.style.color = "rgb(15, 228, 15)";
+      helptime.style.color = "green";
       time.style.border="3px solid #3ff312"
     }
 
@@ -92,13 +92,14 @@ submit.addEventListener("click",function (){
       }
       if(time.value=="4:00 PM" && type.value=="Chocolate"){
        
-        helpaler.innerHTML="that this type of cake cannot be delivered at 4 PM."
+        helptime.innerHTML="that this type of cake cannot be delivered at 4 PM."
         helptime.style.color="red"
         time.style.border="3px solid red" 
       }
 
   }
     )
+
 
     
 
