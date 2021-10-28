@@ -11,8 +11,17 @@ var time=document.getElementById("time");
 var helptime=document.getElementById("helptime");
 var aler=document.getElementById("aler");
 var helpaler=document.getElementById("helpaler");
-
 var submit=document.querySelector("#btn");
+var welcomeBtn=document.getElementById("welcomeBtn");
+var showBtn=document.getElementById("showBtn");
+
+showBtn.addEventListener("click",function (){
+  // var user =localStorage.getItem( 'username')
+  welcomeBtn.innerHTML="Welcome" + " "+localStorage.getItem("username") 
+
+
+})
+
 submit.addEventListener("click",function (){
 
     if(name1.value==""){
@@ -25,6 +34,7 @@ submit.addEventListener("click",function (){
     if(name1.value.match(nameformat)){
         helpname.innerHTML="";
         name1.style.border="3px solid #3ff312"
+        localStorage.setItem("username",name1.value)
 
     
     }
@@ -65,12 +75,11 @@ submit.addEventListener("click",function (){
       time.style.border="3px solid #3ff312"
     }
 
-    if(type.value=="Chocolate" && aler.value=="Dairy Free"){
+    if(type.value =="Chocolate" && aler.value =="Dairy Free"){
       helpaler.innerHTML="type of cake is not dairy free"
       helpaler.style.color="red"
       aler.style.border="3px solid red" 
 
-      // console.log('type of cake is not dairy free')
       
       }
       if(type.value=="Pecan" && aler.value=="Nut Free"){
@@ -83,13 +92,15 @@ submit.addEventListener("click",function (){
       }
       if(time.value=="4:00 PM" && type.value=="Chocolate"){
        
-        helptime.innerHTML="that this type of cake cannot be delivered at 4 PM."
+        helpaler.innerHTML="that this type of cake cannot be delivered at 4 PM."
         helptime.style.color="red"
         time.style.border="3px solid red" 
       }
 
   }
     )
+
+    
 
 var cup_cakes=[ 
     {"name":"Chocolate","calories":"high","weight":"200gm"}, 
@@ -114,9 +125,12 @@ var cup_cakes=[
        var tdElement3 = document.createElement("td")
        trEl.appendChild(tdElement3)
        tdElement3.innerText=cup_cakes[i].weight
-       if (cup_cakes[i].calories=="high"){tdElement2.style.backgroundColor="red"}
-       if (cup_cakes[i].calories=="medium"){tdElement2.style.backgroundColor="orange"}
-       if (cup_cakes[i].calories=="low"){tdElement2.style.backgroundColor="green"}
+       if (cup_cakes[i].calories=="high")
+       {tdElement2.style.backgroundColor="red"}
+       if (cup_cakes[i].calories=="medium")
+       {tdElement2.style.backgroundColor="orange"}
+       if (cup_cakes[i].calories=="low")
+       {tdElement2.style.backgroundColor="green"}
      }
    }
 
